@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind css -->
+  <script src="https://unpkg.com/tailwindcss@3.0.18/lib/index.js"></script>
+  <!-- Tailwind css components library  -->
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+  <!-- SwiperJS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./dist/style.css">
+
+  <title>Homepage test tailwind css</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <nav class="bg-white px-2 sm:px-4 py-2.5">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
+      <a href="index.html" class="flex items-center">
+        <img src="/Logo.png" class="mr-7 sm:h-50 w-24 rounded alt=" Logo">
+        <span class="self-center text-xl font-bold whitespace-nowrap dark:text-orange-500">GMS StartUp</span>
+      </a>
+
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex 
+      items-center p-2 ml-3 text-sm text-gray-500 rounded-lg
+      md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 
+      focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 
+      dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 
+        011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 
+        0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd">
+          </path>
+        </svg>
+      </button>
+
+
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="flex flex-col p-4 mt-4 rounded-lg border border-gray-100 
+        md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white 
+      dark:border-black-700">
+          <li>
+            <a href="index.html" class="block py-2 pr-4 pl-3 text-black bg-white rounded 
+            md:bg-transparent md:text-red-700 md:p-0 dark:text-black" aria-current="page">ACCUEIL</a>
+          </li>
+          <li>
+            <a href="index.html" class="block py-2 pr-4 pl-3 text-black bg-white rounded 
+            md:bg-transparent md:text-red-700 md:p-0 dark:text-black" aria-current="page">A PROPOS</a>
+          </li>
+          <li>
+            <a href="index.html" class="block py-2 pr-4 pl-3 text-black bg-white rounded 
+            md:bg-transparent md:text-red-700 md:p-0 dark:text-black" aria-current="page">SERVICES</a>
+          </li>
+          <li>
+            <a href="index.html" class="block py-2 pr-4 pl-3 text-black bg-white rounded 
+            md:bg-transparent md:text-red-700 md:p-0 dark:text-black" aria-current="page">PARTENAIRES</a>
+          </li>
+          <li>
+            <a href="index.html" class="block py-2 pr-4 pl-3 text-black bg-white rounded 
+            md:bg-transparent md:text-red-700 md:p-0 dark:text-black" aria-current="page">CONTACT</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Slider main container -->
+
+  <div class="swiper w-full h-screen">
+
+    <!-- Additional required wrapper -->
+
+    <div class="swiper-wrapper">
+
+      <!-- Slides -->
+
+      <div class="swiper-slide"><img class="object-center object-cover w-full h-full" src="/carousel1.jpg" alt=""></div>
+      <div class="swiper-slide"><img class="object-center object-cover w-full h-full" src="/carousel2.jpg" alt=""></div>
+      <div class="swiper-slide"><img class="object-center object-cover w-full h-full" src="/carousel1.jpg" alt=""></div>
+    </div>
+
+    <!-- If we need pagination -->
+
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+
+    <!-- <!-- <div class="swiper-scrollbar"></div> -->
+  </div> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+
+
+
+  <!-- Initialisation de swiper -->
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      speed: 400,
+      spaceBetween: 100,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  </script>
+
+</body>
+
+</html>
